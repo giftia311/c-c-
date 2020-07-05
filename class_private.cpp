@@ -2,20 +2,27 @@
 
 using namespace std;
 
-class Blacky{
+class Blackyclass{
     public :
-        void Blacky_public_printf()
-            {
-                cout<<"Blacky_public_printf!!";
-            }
-
+        Blackyclass(string z){
+            setName(z);
+        }
+        void setName(string x){
+            name = x;
+        }
+        string getName(){
+            return name;
+        }
+    private:
+        string name;
+        
 };
 
 
 int main()
 {
-    Blacky bl;
-    bl.Blacky_public_printf();
+    Blackyclass bl("main -> class name ");
+    cout << bl.getName();
 
     return 0;
 }
